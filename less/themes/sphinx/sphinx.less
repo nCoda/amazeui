@@ -39,6 +39,14 @@ ul.simple {
             background-color: @gray;
         }
     }
+    hr {
+        border-top-color: @comp-l1-line;
+        margin-top: @base-margin-vertical;
+    }
+    .am-btn-default {
+        background-color: @comp-l2-bg;
+        border-color: @comp-l2-border;
+    }
 }
 
 // this is the pilcrow on every section header
@@ -124,3 +132,28 @@ dd {  // the description block
 .admonition.note .admonition-title { background-color: @global-info; }
 .admonition.tip .admonition-title { background-color: @global-info; }
 .admonition.warning .admonition-title { background-color: @global-warning; }
+
+
+// footer
+.@{ns}footer .logo {
+    max-height: 1em;
+}
+
+
+// search results (generated in JavaScript by searchtools.js_t
+#search-results {
+    .search {
+        a {
+            display: inline;
+            text-decoration: underline;
+        }
+        .context {
+            margin-left: 4rem;
+        }
+    }
+}
+.highlighted {
+    // NB: same as amazeUI <mark> element
+    background: @base-mark-background;
+    color: @base-mark-color;
+}
