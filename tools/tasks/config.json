@@ -1,0 +1,9 @@
+{
+  "style": [
+    "themes/sphinx/theme.less"
+  ],
+  "js": [
+    "core.js",
+    "ui.offcanvas"
+  ]
+}
