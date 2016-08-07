@@ -1,0 +1,120 @@
+// Customizations specific to the nCoda Sphinx theme.
+//
+// This is basically to compensate for the fact that Sphinx isn't very flexible in terms of which
+// CSS classes it will output.
+
+.toctree-wrapper ul {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.toctree-wrapper li {
+    list-style: none;
+}
+
+ul.simple {
+    .am-list;
+    > li {
+        padding: 0.5em;
+        > a {
+            display: inline;
+        }
+    }
+}
+
+.sidebar-navigation {
+    .homelink:hover {
+        color: @global-primary;
+        text-decoration: underline;
+    }
+    ul {
+        .am-nav;
+        > li > a:hover {
+            background-color: @gray;
+        }
+    }
+}
+
+// this is the pilcrow on every section header
+a.headerlink {
+    font-size: 1em;
+    margin-left: 1em;
+    visibility: hidden;
+}
+h1:hover a.headerlink { visibility: visible; }
+h2:hover a.headerlink { visibility: visible; }
+h3:hover a.headerlink { visibility: visible; }
+h4:hover a.headerlink { visibility: visible; }
+h5:hover a.headerlink { visibility: visible; }
+h6:hover a.headerlink { visibility: visible; }
+
+// code highlighting (line numbers)
+.linenos {
+    padding-right: @table-cell-padding
+}
+.linenodiv pre {
+    border: none;
+    background-color: unset;
+    color: inherit;
+}
+
+// code literals that link to other topics
+a code.xref {
+    color: @link-color;
+    :hover {
+        text-decoration: underline;
+    }
+}
+
+// definitions for functions, classes, etc.
+dt {  // the term itself
+    font-weight: normal;
+    code.descname {
+        font-size: 1.5em;
+    }
+    em.property {
+        font-size: smaller;
+        font-style: normal;
+    }
+}
+dd {  // the description block
+    margin-top: 0.25em;
+    margin-bottom: 2em;
+    margin-left: 2.25em;
+    .field-name {
+        background-color: @gray-lighter;
+        padding: 0.2em;
+    }
+    .field-body {
+        padding-left: 0.75em;
+    }
+}
+
+
+// admonitions
+.admonition {
+    background-color: @gray-lighter;
+    font-size: 0.9em;
+    margin: 1em 0 1em 0;
+    padding: 0;
+    .admonition-title {
+        background-color: @global-primary;
+        margin: 0;
+        padding: 0.1em 0 0.1em 0.5em;
+        color: @white;
+        font-weight: bold;
+    }
+    p {
+        margin: 0;
+        padding: 1em;
+    }
+}
+.admonition.attention .admonition-title { background-color: @global-info; }
+.admonition.caution .admonition-title { background-color: @global-warning; }
+.admonition.danger .admonition-title { background-color: @global-danger; }
+.admonition.error .admonition-title { background-color: @global-info; }
+.admonition.hint .admonition-title { background-color: @global-success; }
+.admonition.important .admonition-title { background-color: @global-warning; }
+.admonition.note .admonition-title { background-color: @global-info; }
+.admonition.tip .admonition-title { background-color: @global-info; }
+.admonition.warning .admonition-title { background-color: @global-warning; }
