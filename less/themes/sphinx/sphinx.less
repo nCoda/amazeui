@@ -22,31 +22,42 @@ ul.simple {
     }
 }
 
+@sidebar-transition-duration: 0.25s;
 .sidebar-navigation {
-    .logo img {
-        max-width: 100%;
-        &:hover {
-            filter: drop-shadow(0 0 0.3em #50C878);
+    .logo {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        a { max-width: 80%; }
+        img {
+            max-width: 100%;
+            transition: filter @sidebar-transition-duration;
+            &:hover {
+                filter: drop-shadow(0 0 0.3em @global-primary);
+            }
         }
     }
-    .homelink:hover {
-        color: @global-primary;
-        text-decoration: underline;
-    }
-    ul {
-        .am-nav;
-        > li > a:hover {
-            background-color: @gray;
+    .am-nav {
+        a { transition: color @sidebar-transition-duration; }
+        > li + li { margin: 0; }
+        ul {
+            .am-nav;
+            margin: 0;
+            > li + li { margin: 0; }
+            > li > a, > li > a { transition: color @sidebar-transition-duration; }
+            > li > a:focus, > li > a:hover {
+                color: @global-primary;
+                background: unset;
+            }
         }
     }
     hr {
-        border-top-color: @comp-l1-line;
+        border-top-color: @gray;
         margin-top: @base-margin-vertical;
     }
-    .am-btn-default {
-        background-color: @comp-l2-bg;
-        border-color: @comp-l2-border;
-    }
+    .project_version { font-weight: 400; }
 }
 
 // this is the pilcrow on every section header

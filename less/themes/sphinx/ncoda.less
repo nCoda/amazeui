@@ -112,7 +112,7 @@ body {
 
 @font-family-monospace: "Fira Mono", Monaco, Menlo, Consolas, "Courier New", "FontAwesome", monospace;
 
-@fa-font-path: '../../lib/amazeui/fonts';
+@fa-font-path: '/_static/fonts';
 
 
 // =============================================================================
@@ -233,22 +233,28 @@ body {
 // =============================================================================
 
 @offcanvas-dimmer-background: fade(@black, 30%);
-@offcanvas-bar-background:    @comp-l1-bg;
-@offcanvas-bar-border-color:  @comp-l1-border;
+@offcanvas-bar-background:    @topbar-bg;
+@offcanvas-bar-border-color:  @topbar-bg;
 
-.am-offcanvas-bar {
-    box-shadow: 0 0 2rem 0 @comp-l1-border;
+.hook-offcanvas-bar() {
+    box-shadow: 0 0 1rem 0 @black;
+    &:after { background: @topbar-border; }
 }
 
 .am-offcanvas-content {
-    padding: @global-padding;
-    background: inherit;
-    color: @base-text-color;
-    a {
-        color: @base-text-color;  // modified for Sphinx theme
-        &:hover {
-            color: @global-primary;  // modified for Sphinx theme
+    color: @global-contrast-color;
+    a { color: @global-contrast-color; }
+
+    .am-nav {
+        a:focus, a:hover {
+            color: @global-primary;
+            background: unset;
         }
+    }
+
+    .am-nav-header {
+        color: @global-contrast-color;
+        font-weight: 600;
     }
 }
 
@@ -258,7 +264,7 @@ body {
 // =============================================================================
 
 @list-bg:            inherit;
-@list-border:        @comp-l1-border;        ///////////////
+@list-border:        @comp-l1-border;
 // does not work:
 // @list-hover-bg
 
