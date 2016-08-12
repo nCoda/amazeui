@@ -158,3 +158,32 @@ dd {  // the description block
     background: @base-mark-background;
     color: @base-mark-color;
 }
+
+
+// nCoda-in-Sphinx class on a <nav> that's an amazeUI ScrollSpyNav
+.in-page-nav {
+    top: 0;
+    z-index: 100;
+    background: @topbar-bg;
+    width: 100%;
+    padding: 0 10px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline-block;
+        list-style: none;
+    }
+
+    a {
+        color: @topbar-link-color;
+        padding: 10px 20px;
+        display: inline-block;
+        &.am-active {
+            color: @topbar-link-active-color;
+        }
+    }
+}
