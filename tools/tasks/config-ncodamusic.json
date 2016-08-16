@@ -1,0 +1,9 @@
+{
+  "style": [
+    "themes/ncodamusic.org/theme.less"
+  ],
+  "js": [
+    "core.js",
+    "ui.dropdown"
+  ]
+}

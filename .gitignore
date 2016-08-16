@@ -36,5 +36,5 @@ docs/examples/assets/css/amazeui*.css
 docs/examlsples/assets/js/amazeui*.js
 
 #customize
-#tools/tasks/config.json
+tools/tasks/config.json
 dist/customized
