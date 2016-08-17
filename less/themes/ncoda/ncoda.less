@@ -200,7 +200,7 @@ body {
 // @topbar-brand-hover-bg
 
 // we must set the :hover colours manually
-.am-topbar li > a:hover {
+@{ns}topbar li > a:hover {
     color: @global-primary;
     &:after {
         border-bottom-color: @global-primary;
@@ -241,18 +241,18 @@ body {
     &:after { background: @topbar-border; }
 }
 
-.am-offcanvas-content {
+@{ns}offcanvas-content {
     color: @global-contrast-color;
     a { color: @global-contrast-color; }
 
-    .am-nav {
+    @{ns}nav {
         a:focus, a:hover {
             color: @global-primary;
             background: unset;
         }
     }
 
-    .am-nav-header {
+    @{ns}nav-header {
         color: @global-contrast-color;
         font-weight: 600;
     }
@@ -321,7 +321,8 @@ body {
     @footer-divider-color: @gray-light;
     // they put the hook in an awkward spot, so those variables don't actually override properly
     background-color: @footer-bg;
-    .am-footer-divider { color: @footer-divider-color; }
+    @{ns}footer-divider { color: @footer-divider-color; }
+    a:hover { color: @link-hover-color; }
 }
 
 
