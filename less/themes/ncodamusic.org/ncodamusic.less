@@ -9,3 +9,62 @@
 .am-topbar .am-dropdown-content {
     color: @text-color;
 }
+
+// ============================================================================
+// Homepage-specific styles (start)
+// ============================================================================
+.logoheading {
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.subheading {
+    margin-top: 0;
+}
+
+.boxes {
+    margin-top: 3rem;
+
+    div.subsect {
+        margin-bottom: @global-padding;
+        border-radius: @radius-normal;
+        background-color: @comp-l1-bg;
+        border-color: @comp-l1-border;
+        padding: @global-padding;
+        text-align: center;
+        color: @base-text-color;
+        width: 95%;
+        font-size: 80%;
+        .global-box-shadow();
+
+        a {
+            color: @base-text-color;
+            &:hover { color: @global-primary; }
+        }
+    }
+
+    i { // Font Awesome icons
+        font-size: 5rem;
+    }
+}
+
+.tech-notes {
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+
+    .tech-list {
+
+        img {
+            max-height: 50px; // no taller than height of Verovio logo
+            vertical-align: middle;
+        }
+
+        > div {
+            padding: 2rem;
+        }
+    }
+}
+
+// ============================================================================
+// Homepage-specific styles (end)
+// ============================================================================
