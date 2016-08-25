@@ -6,13 +6,22 @@
 
 @fa-font-path: '/theme/fonts';
 
-.am-topbar .am-dropdown-content {
+@{ns}topbar @{ns}dropdown-content {
     color: @text-color;
 }
 
 // ============================================================================
 // Homepage-specific styles (start)
 // ============================================================================
+.rotation-hidey-class { overflow: hidden; }
+.coda-menu-button {
+    transition: 0.5s ease-in-out transform;
+    border: none;
+    margin: 0;
+    padding: 0;
+    &:hover { transform: rotate(-30deg); };
+}
+
 .logoheading {
     margin-top: 2rem;
     margin-bottom: 0;
