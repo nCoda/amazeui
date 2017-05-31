@@ -4,6 +4,7 @@
   ],
   "js": [
     "core.js",
+    "ui.collapse.js",
     "ui.offcanvas",
     "ui.scrollspynav.js",
     "ui.sticky.js"
