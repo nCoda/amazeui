@@ -2,7 +2,7 @@
 //
 // For things that don't apply to other nCoda amazeUI themes.
 //
-// Copyright 2016 Christopher Antila
+// Copyright 2016, 2018 Christopher Antila
 
 @fa-font-path: '/theme/fonts';
 
@@ -38,6 +38,18 @@
 .tech-list img {
     max-height: 50px; // no taller than height of Verovio logo
     vertical-align: middle;
+}
+
+a.external {
+    text-decoration: none;
+}
+
+a.external::after {
+    content: '\f08e';
+    display: inline-block;
+    font: normal normal normal 1.6rem/1 FontAwesome,sans-serif;
+    margin-left: .5em;
+    margin-right: .25em;
 }
 
 // ============================================================================
